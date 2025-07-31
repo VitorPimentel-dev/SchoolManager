@@ -12,3 +12,4 @@ C:\Users\vitor\OneDrive\Desktop\Curso - C# POO\Projetos\SchoolManager\SchoolMana
 C:\Users\vitor\OneDrive\Desktop\Curso - C# POO\Projetos\SchoolManager\SchoolManager\obj\Debug\net8.0\SchoolManager.pdb
 C:\Users\vitor\OneDrive\Desktop\Curso - C# POO\Projetos\SchoolManager\SchoolManager\obj\Debug\net8.0\SchoolManager.genruntimeconfig.cache
 C:\Users\vitor\OneDrive\Desktop\Curso - C# POO\Projetos\SchoolManager\SchoolManager\obj\Debug\net8.0\ref\SchoolManager.dll
+C:\Users\vitor\OneDrive\Desktop\Curso - C# POO\Projetos\SchoolManager\SchoolManager\obj\Debug\net8.0\SchoolManager.sourcelink.json

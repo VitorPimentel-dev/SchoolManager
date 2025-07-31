@@ -27,9 +27,18 @@ namespace SchoolManager.Entities
             int soma = P1 + P2 + P3;
             return (double)soma / 3;
         }
+        public string Avaliação()
+        {
+            if(Media()<60.0)
+            {
+                return "Reprovado";
+            }
+            return "Aprovado";
+        }
+
         public override string ToString()
         {
-            return $"{Id},{Name}, Media = {Media().ToString("F2", CultureInfo.InvariantCulture)}";
+            return $"{Id},{Name}, Media = {Media().ToString("F2", CultureInfo.InvariantCulture)} e você foi {Avaliação()}";
         }
 
     }

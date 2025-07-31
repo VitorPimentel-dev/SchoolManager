@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "SchoolManager\\Entities\\Student.cs",
               "ToolTip": "C:\\Users\\vitor\\OneDrive\\Desktop\\Curso - C# POO\\Projetos\\SchoolManager\\SchoolManager\\Entities\\Student.cs",
               "RelativeToolTip": "SchoolManager\\Entities\\Student.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAABiAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCgAAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-31T04:04:04.202Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "SchoolManager\\Entities\\Person.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T04:01:18.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T04:01:18.103Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "SchoolManager\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T02:49:08.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T02:49:08.935Z"
             }
           ]
         }
