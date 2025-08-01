@@ -8,25 +8,54 @@ namespace SchoolManager
     {
         static void Main(string[] args)
         {
-            Dictionary<int ,Student> students = new Dictionary<int,Student>();
+            Dictionary<int, Student> students = new Dictionary<int, Student>();
             int n = 1;
-            while(n != 0)
+            while (n != 0)
             {
                 Console.WriteLine("1. Adicionar estudante");
-                Console.WriteLine("2. Exibir dados dos estudantes");
-                n = int.Parse(Console.ReadLine()!);
-                switch(n)
+                Console.WriteLine("2. Exibir estudantes");
+                Console.WriteLine("0. Sair");
+
+                while (!int.TryParse(Console.ReadLine(), out n) || (n < 0 || n > 2))
+                {
+                    Console.Write("Opção inválida. Tente novamente:");
+                }
+
+                switch (n)
                 {
                     case 1:
                         {
-                            Console.Write("Entre com o nome do estudante:");
+                            Console.Write("Entre com o nome do estudante: ");
                             string name = Console.ReadLine()!;
+
+                            int id;
                             Console.Write("Entre com o ID do estudante: ");
-                            int id = int.Parse(Console.ReadLine()!);
+                            while (!int.TryParse(Console.ReadLine(), out id))
+                            {
+                                Console.Write("ID inválido. Digite um número inteiro:");
+                            }
+
+                            int p1, p2, p3;
                             Console.WriteLine("Entre com as notas:");
-                            int p1 = int.Parse(Console.ReadLine()!);
-                            int p2 = int.Parse(Console.ReadLine()!);
-                            int p3 = int.Parse(Console.ReadLine()!);
+
+                            Console.Write("P1: ");
+                            while (!int.TryParse(Console.ReadLine(), out p1))
+                            {
+                                Console.Write("Nota inválida. Digite um número inteiro:");
+                            }
+
+                            Console.Write("P2: ");
+                            while (!int.TryParse(Console.ReadLine(), out p2))
+                            {
+                                Console.Write("Nota inválida. Digite um número inteiro:");
+                            }
+
+                            Console.Write("P3: ");
+                            while (!int.TryParse(Console.ReadLine(), out p3))
+                            {
+                                Console.Write("Nota inválida. Digite um número inteiro:");
+                            }
+
                             Student student = new Student(id, name, p1, p2, p3);
                             if (!students.TryAdd(student.Id, student))
                             {
@@ -38,17 +67,22 @@ namespace SchoolManager
                             }
                             break;
                         }
-                     case 2:
+                    case 2:
                         {
-                            foreach(var student in students.Values)
+                            foreach (var student in students.Values)
                             {
                                 Console.WriteLine(student);
                             }
                             break;
                         }
+                    case 0:
+                        {
+                            Console.WriteLine("Saindo...");
+                            break;
+                        }
                 }
             }
-      
+
         }
     }
 }

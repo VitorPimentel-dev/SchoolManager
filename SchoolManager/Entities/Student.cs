@@ -36,7 +36,7 @@ namespace SchoolManager.Entities
 
         public override string ToString()
         {
-            return $"{Id},{Name}, Media = {Media().ToString("F2", CultureInfo.InvariantCulture)} e você foi {Avaliação()}";
+            return $"{Id},{Name}, Media = {Media().ToString("F2", CultureInfo.InvariantCulture)} esse estudante foi {Avaliação()}";
         }
 
     }
