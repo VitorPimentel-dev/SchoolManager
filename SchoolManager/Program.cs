@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using SchoolManager.Entities;
+using SchoolManager.Services;
 
 namespace SchoolManager
 {
@@ -8,7 +9,7 @@ namespace SchoolManager
     {
         static void Main(string[] args)
         {
-            Dictionary<int, Student> students = new Dictionary<int, Student>();
+            StudentsManager manager = new StudentsManager();
             int n = 1;
             while (n != 0)
             {
@@ -57,7 +58,8 @@ namespace SchoolManager
                             }
 
                             Student student = new Student(id, name, p1, p2, p3);
-                            if (!students.TryAdd(student.Id, student))
+                            
+                            if (!manager.TryAdd(student))
                             {
                                 Console.WriteLine($"Erro: Já existe um estudante com ID {student.Id}.");
                             }
@@ -69,10 +71,7 @@ namespace SchoolManager
                         }
                     case 2:
                         {
-                            foreach (var student in students.Values)
-                            {
-                                Console.WriteLine(student);
-                            }
+                            manager.PrintAll();
                             break;
                         }
                     case 0:
