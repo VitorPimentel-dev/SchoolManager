@@ -21,5 +21,14 @@ namespace SchoolManager.Services
         {
             return students;
         }
+
+        public bool Remove(int id)
+        {
+            return students.Remove(id);
+        }
+        public bool IsEmpty()
+        {
+            return students.Count == 0;
+        }
     }
 }

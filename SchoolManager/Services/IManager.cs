@@ -6,5 +6,7 @@ namespace SchoolManager.Services
         bool TryAdd(T entity);
         Dictionary<int, T> GetAll();
         void PrintAll();
+        bool Remove(int id);
+        bool IsEmpty();
     }
 }

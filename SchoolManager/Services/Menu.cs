@@ -14,11 +14,14 @@ namespace SchoolManager.Services
             {
                 Console.WriteLine("1. Adicionar estudante");
                 Console.WriteLine("2. Exibir estudantes");
+                Console.WriteLine("3. remover estudante por ID");
                 Console.WriteLine("0. Sair");
 
-                while (!int.TryParse(Console.ReadLine(), out n) || (n < 0 || n > 2))
+                while (!int.TryParse(Console.ReadLine(), out n) || (n < 0 || n > 3))
                 {
-                    Console.Write("Opção inválida. Tente novamente:");
+                    Console.Write("Opção inválida, tente novamente.");
+                    Console.WriteLine();
+                    break;
                 }
 
                 switch (n)
@@ -70,7 +73,41 @@ namespace SchoolManager.Services
                         }
                     case 2:
                         {
-                            manager.PrintAll();
+                            if (manager.IsEmpty())
+                            {
+                                Console.WriteLine("Não há estudantes cadastrados.");
+                            }
+                            else
+                            {
+                                manager.PrintAll();
+                            }
+
+                            break;
+                        }
+                    case 3:
+                        {
+
+                            if (manager.IsEmpty())
+                            {
+                                Console.WriteLine("Não há estudantes cadastrados.");
+
+                            }
+                            else
+                            {
+
+                                Console.Write("Entre com o ID do estudante que deseja remover:");
+                                int id = int.Parse(Console.ReadLine()!);
+
+                                if (manager.Remove(id))
+                                {
+                                    Console.WriteLine("Estudante removido com sucesso!");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Não existe nenhum estudante com esse ID!");
+                                }
+                            }
+
                             break;
                         }
                     case 0:
