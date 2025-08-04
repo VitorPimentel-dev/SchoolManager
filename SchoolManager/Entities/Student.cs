@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Globalization;
 
+
 namespace SchoolManager.Entities
 {
     internal class Student: Person
     {
+        private Dictionary<int, Subject> _subjects;
         public int P1 { get; private set; }
         public int P2 { get; private set; }
         public int P3 { get; private set; }

@@ -6,32 +6,32 @@ namespace SchoolManager.Services
 {
     internal class TeacherManager : IManager<Teacher>
     {
-        Dictionary<int, Teacher> teachers = new Dictionary<int, Teacher>();
+        private Dictionary<int, Teacher> _teachers = new Dictionary<int, Teacher>();
         public TeacherManager()
         {
         }
         public bool TryAdd(Teacher teacher)
         {
-            return teachers.TryAdd(teacher.Id, teacher);
+            return _teachers.TryAdd(teacher.Id, teacher);
         }
         public bool Remove(int id)
         {
-            return teachers.Remove(id);
+            return _teachers.Remove(id);
         }
         public Dictionary<int, Teacher> GetAll()
         {
-            return teachers;
+            return _teachers;
         }
         public void PrintAll()
         {
-            foreach(var teacher in teachers.Values)
+            foreach(var teacher in _teachers.Values)
             {
                 Console.WriteLine(teacher);
             }
         }
         public bool IsEmpty()
         {
-            return teachers.Count == 0;
+            return _teachers.Count == 0;
         }
     }
 }
