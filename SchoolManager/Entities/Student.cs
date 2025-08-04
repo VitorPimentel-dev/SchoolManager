@@ -7,7 +7,7 @@ namespace SchoolManager.Entities
 {
     internal class Student: Person
     {
-        private Dictionary<int, Subject> _subjects;
+        private Dictionary<int, Subject> _subjects = new Dictionary<int, Subject>();
         public int P1 { get; private set; }
         public int P2 { get; private set; }
         public int P3 { get; private set; }
@@ -21,6 +21,10 @@ namespace SchoolManager.Entities
             P1 = p1;
             P2 = p2;
             P3 = p3;
+        }
+        public bool tryAdd(int id)
+        {
+            return ;
         }
         public double Media()
         {
